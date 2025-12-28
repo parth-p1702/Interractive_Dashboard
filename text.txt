@@ -1,0 +1,3 @@
+"In this Section Mentor suggest how to start and solve DSA questions"
+
+and this is *DOM* project

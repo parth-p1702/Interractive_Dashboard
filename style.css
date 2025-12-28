@@ -1,0 +1,276 @@
+:root{
+    --pri:#F8F4F1;
+    --sec:#321604;
+    --tri1:#FEBA17;
+    --tri1Hover:#d59500;
+    --tri2:#74512D;
+    --btnBack:crimson;
+
+}
+
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Light.otf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Regular.otf);
+    font-weight: 500;
+
+}
+
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Bold.otf);
+    font-weight: 700;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: var(--pri);
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--sec);
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--tri2);
+}
+
+section.allElems{
+    height: 100%;
+    width: 100%;
+    padding: 40px ;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    position: absolute;
+}
+
+.elem{
+    background-color: #FEBA17;
+    height: 400px;
+    width: 330px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.3s;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.elem:active{
+    scale: 0.95;
+}
+.elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.elem h2{
+    position: absolute;
+    right: 5%;
+    bottom: 4%;
+    font-size: 33px;
+    font-weight: 400;
+}
+
+
+.fullElems{
+    width: 100%;
+    height: 100%;
+    background-color: #381c0a;
+    padding: 40px;
+    display: none;
+    position: absolute;
+}
+
+.back{
+    position: absolute;
+    right: 5%;
+    background-color: var(--btnBack);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back:active{
+    scale: 0.95;
+}
+
+
+.todo-list-fullpage h2{
+    font-size: 65px;
+}
+
+.todo-list-fullpage .todo-container{
+    width: 100%;
+    height: 80%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .addTask{
+    width: 33%;
+    height: 100%;
+    background-color: var(--tri2);
+    border-radius: 15px;
+}
+
+
+
+.todo-list-fullpage .todo-container .addTask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-container .addTask form input#task-input{
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 25px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.todo-container .addTask form textarea{
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 25px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.todo-container .addTask form button{
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 25px;
+    background-color: var(--tri1);
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.todo-container .addTask form button:active{
+    scale: 0.95;
+}
+
+.todo-container .addTask form button:hover{
+    background-color: var(--tri1Hover);
+}
+
+.todo-list-fullpage .todo-container .allTask{
+    width: 65%;
+    height: 100%;
+    background-color: var(--tri2);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.todo-list-fullpage .todo-container .allTask::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 18px 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task h5{
+    color: var(--sec);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.task h5 span{
+    background-color: var(--btnBack);
+    color: var(--pri);
+    border-radius: 50px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+
+
+.task h5 span.true{
+    opacity: 1;
+}
+.task h5 span.false{
+    opacity: 0;
+}
+
+.task button{
+    padding: 10px 20px;
+    color: var(--pri);
+    background-color: green;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+}
+
+.mark-imp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    width: 100%;
+    gap: 20px;
+}
+
+.mark-imp input{
+    scale: 1.5;
+}
+
+.mark-imp label{
+    font-size: 20px;
+}
