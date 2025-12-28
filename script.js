@@ -18,12 +18,13 @@ function openFeatures() {
 }
 openFeatures();
 
+
+function todoList(){
+
 let form = document.querySelector(".addTask form");
 let taskInput = document.querySelector(".addTask form #task-input");
 let taskDetailsInput = document.querySelector(".addTask form textarea");
 let taskCheckBox = document.querySelector(".addTask form #check");
-
-function todoList(){
     
 var currentTask = []
 
@@ -35,9 +36,9 @@ if(localStorage.getItem('currentTask')){
 }
 
 function renderTask() {
-    var allTask = document.querySelector(".allTask");
+    let allTask = document.querySelector(".allTask");
     
-    var sum = "";
+    let sum = "";
     
     currentTask.forEach((elem,idx) => {
         sum += `<div class="task">
@@ -80,3 +81,41 @@ form.addEventListener("submit", (e) => {
 
 }
 todoList()
+
+
+function dailyPlanner(){
+  
+var dayPlanner = document.querySelector('.day-planner')
+
+var dayPlanData = JSON.parse(localStorage.getItem('dayPlanData') || '{}');
+
+var hours = Array.from({length:18}, (_,idx)=>`${6+idx}:00 - ${7+idx}:00`)
+
+
+var wholeDaySum = '';
+
+hours.forEach((elem,idx)=>{
+  var savedData = dayPlanData[idx] || '';
+  
+  wholeDaySum += `<div class="day-planner-time">
+  <p>${elem}</p>
+  <input id=${idx} type="text" placeholder="..." value=${savedData}>
+  </div>`
+})
+
+
+dayPlanner.innerHTML = wholeDaySum;
+
+var dayPlannerInput = document.querySelectorAll('.day-planner input');
+// console.log(dayPlannerInput);
+
+dayPlannerInput.forEach((elem)=>{
+  elem.addEventListener('input',()=>{
+    dayPlanData[elem.id] = elem.value
+    // console.log(dayPlanData);
+    localStorage.setItem('dayPlanData',JSON.stringify(dayPlanData))
+  })
+})
+}
+
+dailyPlanner();
