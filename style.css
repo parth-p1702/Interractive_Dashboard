@@ -41,6 +41,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: var(--sec);
+    scroll-behavior: smooth;
 }
 
 nav{
@@ -64,22 +65,26 @@ section.allElems{
 
 .elem{
     background-color: #FEBA17;
-    height: 400px;
-    width: 330px;
+    height: 375px;
+    width: 300px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     transition: all ease 0.3s;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 0.1px solid wheat;
 }
 
 .elem:active{
     scale: 0.95;
 }
-.elem img{
+.elem video{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    filter: brightness(70%);
 }
 
 .elem h2{
@@ -89,7 +94,6 @@ section.allElems{
     font-size: 33px;
     font-weight: 400;
 }
-
 
 .fullElems{
     width: 100%;
@@ -116,7 +120,6 @@ section.allElems{
 .back:active{
     scale: 0.95;
 }
-
 
 .todo-list-fullpage h2{
     font-size: 65px;
@@ -237,8 +240,6 @@ section.allElems{
     font-weight: bolder;
 }
 
-
-
 .task h5 span.true{
     opacity: 1;
 }
@@ -327,4 +328,106 @@ section.allElems{
     border-radius: 5px;
     font-size: 22px;
     padding-top: 35px;
+}
+
+.motivation-fullPage-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.motivational-fullpage{
+    /* display: block; */
+}
+
+.motivational-fullpage .motivation-container{
+    height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    position: relative;
+    isolation: isolate;
+}
+
+.motivational-fullpage .motivation-container::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--tri1);
+    position: absolute;
+    border-radius: 20px;
+    scale: 1.25;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    background-color: var(--tri1);
+    border-radius: 15px;
+    padding: 8px 15px;
+    border: 2px solid var(--sec);
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper img{
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    opacity: 0.35;
+}
+
+.motivation-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.motivation-1 h2{
+    font-size: 28px;
+    font-weight: 500;
+    background-color: var(--tri2);
+    padding: 10px;
+    border-radius: 18px;
+    width: fit-content;
+    font-weight: 300;
+}
+
+.motivation-2{
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.motivation-2 h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--sec);
+}
+
+.motivation-3{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 6px;
+}
+
+.motivation-3 h2{
+    background-color: var(--tri2);
+    padding: 15px;
+    border-radius: 18px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    font-style: italic;
+    letter-spacing: 0.8px;
+}
+
+.motivation-3 h2::before{
+    content: '- ';
 }

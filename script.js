@@ -18,7 +18,6 @@ function openFeatures() {
 }
 openFeatures();
 
-
 function todoList(){
 
 let form = document.querySelector(".addTask form");
@@ -117,5 +116,22 @@ dayPlannerInput.forEach((elem)=>{
   })
 })
 }
-
 dailyPlanner();
+
+function motivationalQuote(){
+  
+var motivationQuote = document.querySelector('.motivation-2 h1');
+var motivationAuthor = document.querySelector('.motivation-3 h2');
+
+async function fetchQuote(){
+  
+    let response = await fetch ("https://dummyjson.com/quotes/random")
+    let data = await response.json();
+    motivationQuote.innerHTML = data.quote;
+    motivationAuthor.innerHTML = data.author;
+
+}
+
+fetchQuote()
+}
+motivationalQuote();
