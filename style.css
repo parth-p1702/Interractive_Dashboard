@@ -5,6 +5,8 @@
     --tri1Hover:#d59500;
     --tri2:#74512D;
     --btnBack:crimson;
+    --green:rgb(9,138,89);
+    --blue:rgba(0, 191, 255, 0.546);
 
 }
 
@@ -73,13 +75,12 @@ section.allElems{
     transition: all ease 0.3s;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    border: 0.1px solid wheat;
 }
 
 .elem:active{
     scale: 0.95;
 }
-.elem video{
+.elem img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -430,4 +431,53 @@ section.allElems{
 
 .motivation-3 h2::before{
     content: '- ';
+}
+
+
+.pomodoro-fullpage{
+    /* display: block; */
+}
+
+.pomodoro-fullpage h2{
+    font-size: 50px;
+}
+
+.pomodoro-fullpage .pomo-timer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.pomo-timer h1{
+    font-size: 100px;
+}
+
+.pomo-timer button{
+    background-color: var(--tri2);
+    padding: 14px 25px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 0px black;
+    transition: 0.1s;
+    font-weight: 700;
+}
+
+.pomo-timer button:active{
+    scale: 0.95;
+    box-shadow: 0 0 0 black;
+}
+
+.pomodoro-fullpage .session{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-color: var(--green);
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 5px;
 }
