@@ -9,37 +9,62 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="fonts/favIcon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="fonts/favIcon.png" type="image/x-icon" />
   </head>
   <body>
     <div id="main">
-      <nav></nav>
       <section class="allElems">
-        <div class="todo elem" id="0">
-          <img
-            src="https://images.pexels.com/photos/6962089/pexels-photo-6962089.jpeg"
-            alt=""
-          />
-          <h2>To DO list</h2>
-        </div>
-        <div class="daily elem" id="1">
-          <img src="https://images.pexels.com/photos/7550886/pexels-photo-7550886.jpeg" alt="">
-          <h2>Daily Planner</h2>
-        </div>
-        <div class="moti elem" id="2">
-          <img src="https://images.pexels.com/photos/6185624/pexels-photo-6185624.jpeg" alt="">
-          <h2>Motivation Quote</h2>
-        </div>
-        <div class="pomo elem" id="3">
-          <img src="https://images.pexels.com/photos/12936607/pexels-photo-12936607.jpeg" alt="">
-          <h2>Pomodoro Timer</h2>
-        </div>
-        <div class="goals elem" id="4">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1668447597597-33447c9e6349?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
-          <h2>Daily Goals</h2>
+        <header>
+          <div class="header-1">
+            <h2>29 Dec, 2025</h2>
+            <h1>Saturday, 1:00 pm</h1>
+            <h4>Bharuch (Guj)</h4>
+          </div>
+          <div class="header-2">
+            <h2>20°C</h2>
+            <h4>Light Chain</h4>
+            <h3 class="precipitation">Precipitation: 35%</h3>
+            <h3 class="humidity">Humidity: 49%</h3>
+            <h3 class="wind">Wind: 10 km/h</h3>
+            
+          </div>
+        </header>
+        <div class="allFeatures">
+          <div class="todo elem" id="0">
+            <img
+              src="https://images.pexels.com/photos/6962089/pexels-photo-6962089.jpeg"
+              alt=""
+            />
+            <h2>To DO list</h2>
+          </div>
+          <div class="daily elem" id="1">
+            <img
+              src="https://images.pexels.com/photos/7550886/pexels-photo-7550886.jpeg"
+              alt=""
+            />
+            <h2>Daily Planner</h2>
+          </div>
+          <div class="moti elem" id="2">
+            <img
+              src="https://images.pexels.com/photos/6185624/pexels-photo-6185624.jpeg"
+              alt=""
+            />
+            <h2>Motivation Quote</h2>
+          </div>
+          <div class="pomo elem" id="3">
+            <img
+              src="https://images.pexels.com/photos/12936607/pexels-photo-12936607.jpeg"
+              alt=""
+            />
+            <h2>Pomodoro Timer</h2>
+          </div>
+          <div class="goals elem" id="4">
+            <img
+              src="https://images.pexels.com/photos/3831849/pexels-photo-3831849.jpeg"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
         </div>
       </section>
       <section class="fullElems todo-list-fullpage">
@@ -49,7 +74,12 @@
         <div class="todo-container">
           <div class="addTask">
             <form>
-              <input id="task-input" type="text" placeholder="Enter Task" required/>
+              <input
+                id="task-input"
+                type="text"
+                placeholder="Enter Task"
+                required
+              />
               <textarea
                 placeholder="Enter details"
                 cols="30"
@@ -75,27 +105,25 @@
         <button class="back" id="1">Close</button>
         <h2>Plan your day to be more Productive</h2>
 
-        <div class="day-planner">
-          
-        </div>
+        <div class="day-planner"></div>
       </section>
       <section class="fullElems motivational-fullpage">
         <button class="back" id="2">Close</button>
         <div class="motivation-fullPage-container">
           <div class="motivation-container">
-          <div class="motivation-wrapper">
-            <img src="./fonts/icons8-quote-100.png" alt="">
-            <div class="motivation-1">
-              <h2>Quote of the Day</h2>
-            </div>
-            <div class="motivation-2">
-              <h1></h1>
-            </div>
-            <div class="motivation-3">
-              <h2></h2>
+            <div class="motivation-wrapper">
+              <img src="./fonts/icons8-quote-100.png" alt="" />
+              <div class="motivation-1">
+                <h2>Quote of the Day</h2>
+              </div>
+              <div class="motivation-2">
+                <h1></h1>
+              </div>
+              <div class="motivation-3">
+                <h2></h2>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
       <section class="fullElems pomodoro-fullpage">
@@ -113,6 +141,9 @@
         <button class="back" id="4">Close</button>
         <h1>Daily Goals</h1>
       </section>
+      <div class="theme">
+          <i class="ri-sun-line"></i>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
